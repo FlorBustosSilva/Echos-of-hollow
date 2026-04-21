@@ -10,18 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Proyecto p.a"
-run/main_scene="uid://b1cxfl678f81w"
+config/name="proyectooo"
+run/main_scene="uid://ff5ep8v6vc7g"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
-
-[display]
-
-window/size/viewport_width=480
-window/size/viewport_height=270
-window/size/window_width_override=1280
-window/size/window_height_override=720
-window/stretch/mode="canvas_items"
 
 [physics]
 
@@ -29,5 +21,4 @@ window/stretch/mode="canvas_items"
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

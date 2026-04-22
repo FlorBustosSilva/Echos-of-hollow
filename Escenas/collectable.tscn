@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cg57rqkq0w4j5"]
+
+[ext_resource type="Texture2D" uid="uid://clhotp7qvua1i" path="res://Ninja Adventure - Asset Pack/Items/Potion/Heart.png" id="1_dfqe6"]
+[ext_resource type="Script" uid="uid://5el6oekrojn8" path="res://Scripts/collectable.gd" id="1_qcnqo"]
+[ext_resource type="Resource" uid="uid://dum5f3cm7pe7m" path="res://Inventario/Items/Vida.tres" id="2_67fn3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcnqo"]
+size = Vector2(9, 8)
+
+[node name="Collectable" type="Area2D" unique_id=1500348102]
+scale = Vector2(7.605422, 10.270353)
+script = ExtResource("1_qcnqo")
+itemsRes = ExtResource("2_67fn3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=865177505]
+position = Vector2(4.5, 4)
+shape = SubResource("RectangleShape2D_qcnqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=561699138]
+texture = ExtResource("1_dfqe6")
+centered = false

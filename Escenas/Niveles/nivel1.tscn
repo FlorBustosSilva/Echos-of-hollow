@@ -1,9 +1,13 @@
 [gd_scene format=4 uid="uid://b1cxfl678f81w"]
 
 [ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="1_xdrds"]
+[ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="2_nixvi"]
 [ext_resource type="Texture2D" uid="uid://bwdwyodbkebw" path="res://Sprites/Player/Sprites/IDLE.png" id="2_ntmpc"]
 [ext_resource type="Script" uid="uid://diohb1sv2yy7e" path="res://Escenas/Niveles/CharacterMovements.gd" id="2_tk2b2"]
 [ext_resource type="Texture2D" uid="uid://druxg4c6ugba0" path="res://Sprites/Player/Sprites/RUN.png" id="3_tk2b2"]
+[ext_resource type="Script" uid="uid://bj38cd0axhcmk" path="res://Scripts/canvas_layer.gd" id="6_pcat3"]
+[ext_resource type="PackedScene" uid="uid://b8d1pofpovo8k" path="res://Escenas/Inventory_Gui.tscn" id="7_d5fjb"]
+[ext_resource type="PackedScene" uid="uid://cg57rqkq0w4j5" path="res://Escenas/collectable.tscn" id="8_d5fjb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srp00"]
 texture = ExtResource("1_xdrds")
@@ -14155,13 +14159,14 @@ position = Vector2(25, 191)
 zoom = Vector2(0.3, 0.3)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1013961349 groups=["Player"]]
+visible = false
 script = ExtResource("2_tk2b2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1014595515]
-position = Vector2(-137, 200)
+position = Vector2(-140.00002, 185)
 scale = Vector2(3.8541667, 5.1666665)
 sprite_frames = SubResource("SpriteFrames_8oj8d")
-animation = &"run"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1853160438]
@@ -14170,3 +14175,13 @@ shape = SubResource("RectangleShape2D_nixvi")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=97128624]
 position = Vector2(-428, 443)
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("2_nixvi")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888045552]
+script = ExtResource("6_pcat3")
+
+[node name="Inventory" parent="CanvasLayer" unique_id=1822570111 instance=ExtResource("7_d5fjb")]
+
+[node name="Collectable" parent="." unique_id=1500348102 instance=ExtResource("8_d5fjb")]
+position = Vector2(-335, 135)

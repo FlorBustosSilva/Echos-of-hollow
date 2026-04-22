@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://b8d1pofpovo8k"]
+
+[ext_resource type="Texture2D" uid="uid://c3t70gkshwjkh" path="res://Ninja Adventure - Asset Pack/Ui/Theme/Theme Wood/nine_path_panel_disabled.png" id="1_5dijh"]
+[ext_resource type="Script" uid="uid://cdtms6eod41gs" path="res://Scripts/inventory_gui.gd" id="1_ww23t"]
+[ext_resource type="PackedScene" uid="uid://bxxn21kogg204" path="res://Escenas/Slots_Gui.tscn" id="2_xdm03"]
+
+[node name="Inventory" type="Control" unique_id=1822570111]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 115.0
+offset_bottom = 87.0
+script = ExtResource("1_ww23t")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=536257344]
+layout_mode = 0
+offset_right = 116.0
+offset_bottom = 88.0
+texture = ExtResource("1_5dijh")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 8
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect" unique_id=1156524011]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -34.0
+offset_right = 46.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Slots" parent="NinePatchRect/GridContainer" unique_id=1830137968 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots2" parent="NinePatchRect/GridContainer" unique_id=821446663 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots3" parent="NinePatchRect/GridContainer" unique_id=747247292 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots4" parent="NinePatchRect/GridContainer" unique_id=672428795 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots5" parent="NinePatchRect/GridContainer" unique_id=621549106 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots6" parent="NinePatchRect/GridContainer" unique_id=743432541 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots7" parent="NinePatchRect/GridContainer" unique_id=1910269433 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots8" parent="NinePatchRect/GridContainer" unique_id=1457052549 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots9" parent="NinePatchRect/GridContainer" unique_id=840311882 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots10" parent="NinePatchRect/GridContainer" unique_id=1539087410 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots11" parent="NinePatchRect/GridContainer" unique_id=1919538272 instance=ExtResource("2_xdm03")]
+layout_mode = 2
+
+[node name="Slots12" parent="NinePatchRect/GridContainer" unique_id=140513175 instance=ExtResource("2_xdm03")]
+layout_mode = 2

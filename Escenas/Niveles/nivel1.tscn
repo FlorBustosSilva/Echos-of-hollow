@@ -14185,6 +14185,7 @@ position = Vector2(-428, 443)
 [node name="Player" parent="." unique_id=1606107905 instance=ExtResource("2_nixvi")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888045552]
+visible = false
 script = ExtResource("6_pcat3")
 
 [node name="Inventory" parent="CanvasLayer" unique_id=1822570111 instance=ExtResource("7_d5fjb")]

@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://lgi8xamrs20h" path="res://Sprites_2/RUN/run_left.png" id="7_3tm5s"]
 [ext_resource type="Texture2D" uid="uid://qftgq2mrd7pe" path="res://Sprites_2/RUN/run_right.png" id="8_qoh2p"]
 [ext_resource type="Texture2D" uid="uid://nsa172jvmcbt" path="res://Sprites_2/RUN/run_up.png" id="9_gs42a"]
+[ext_resource type="Script" uid="uid://bj38cd0axhcmk" path="res://Scripts/canvas_layer.gd" id="11_qoh2p"]
+[ext_resource type="PackedScene" uid="uid://b8d1pofpovo8k" path="res://Escenas/Inventory_Gui.tscn" id="12_gs42a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urfe6"]
 atlas = ExtResource("1_hhy33")
@@ -535,5 +537,13 @@ shape = SubResource("RectangleShape2D_t27sq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=60668245]
 position = Vector2(48, 43.5)
 shape = SubResource("RectangleShape2D_mok4h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1965977838]
+script = ExtResource("11_qoh2p")
+
+[node name="Inventory" parent="CanvasLayer" unique_id=1822570111 instance=ExtResource("12_gs42a")]
+offset_left = 1.0
+offset_right = 118.0
+offset_bottom = 89.0
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

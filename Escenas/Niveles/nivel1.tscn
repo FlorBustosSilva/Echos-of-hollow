@@ -13965,6 +13965,7 @@ position = Vector2(25, 191)
 zoom = Vector2(0.3, 0.3)
 
 [node name="Player" parent="." unique_id=1606107905 instance=ExtResource("2_nixvi")]
+position = Vector2(-717.99994, 463.99997)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888045552]
 visible = false

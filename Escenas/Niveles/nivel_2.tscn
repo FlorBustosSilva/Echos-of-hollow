@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="1_p7m46"]
 [ext_resource type="Texture2D" uid="uid://bf27i7m73ikc3" path="res://Sprites/Tiles/Decoraciones laboratorio.png" id="2_t40pw"]
+[ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="3_qi5oq"]
+[ext_resource type="Script" uid="uid://bj38cd0axhcmk" path="res://Scripts/canvas_layer.gd" id="4_jj245"]
+[ext_resource type="PackedScene" uid="uid://b8d1pofpovo8k" path="res://Escenas/Inventory_Gui.tscn" id="5_yy4ar"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_koeil"]
 texture = ExtResource("1_p7m46")
@@ -22777,3 +22780,15 @@ tile_set = SubResource("TileSet_yy4ar")
 [node name="Camera2D" type="Camera2D" parent="TimemapLayer" unique_id=1001857394]
 position = Vector2(32, -91)
 zoom = Vector2(0.3, 0.3)
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("3_qi5oq")]
+position = Vector2(-123.99999, -469.99997)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1591337550]
+script = ExtResource("4_jj245")
+
+[node name="Inventory" parent="CanvasLayer" unique_id=1822570111 instance=ExtResource("5_yy4ar")]
+offset_left = -764.0
+offset_top = -537.0
+offset_right = -647.0
+offset_bottom = -448.0

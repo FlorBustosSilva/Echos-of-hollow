@@ -1,6 +1,9 @@
 extends CharacterBody2D
+class_name Player
 
 var Speed = 300
+
+
 
 @onready var AnimatedSprite = $SpriteAnimated
 @export var Inventory: Inv

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="1_khcbf"]
 [ext_resource type="Texture2D" uid="uid://cddtssoqurxp0" path="res://Sprites/Tiles/DECORACIONES EXTRAS.png" id="2_khcbf"]
+[ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="3_sy8m8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yw1ao"]
 texture = ExtResource("1_khcbf")
@@ -19855,3 +19856,6 @@ tile_set = SubResource("TileSet_ghkgf")
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1149891716]
 position = Vector2(71, -60)
 zoom = Vector2(0.27, 0.27)
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("3_sy8m8")]
+position = Vector2(-899.99994, -214.99998)

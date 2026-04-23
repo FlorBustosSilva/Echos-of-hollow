@@ -516,6 +516,7 @@ script = ExtResource("1_mok4h")
 Inventory = ExtResource("2_t27sq")
 
 [node name="SpriteAnimated" type="AnimatedSprite2D" parent="." unique_id=1524211267 groups=["Player"]]
+position = Vector2(60.01487, 9.505361)
 sprite_frames = SubResource("SpriteFrames_a745i")
 animation = &"Idle_Right"
 autoplay = "Idle_Down"
@@ -523,27 +524,28 @@ frame_progress = 0.42970327
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=13720004]
+visible = false
 position = Vector2(49, 45)
 enabled = false
 zoom = Vector2(1.29, 1.29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=192019448]
-position = Vector2(48.16982, 43.226753)
+position = Vector2(106.60536, 51.600533)
 scale = Vector2(0.9999999, 0.99999946)
 shape = SubResource("RectangleShape2D_t27sq")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=1402125801]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=60668245]
-position = Vector2(48, 43.5)
+position = Vector2(106.60536, 50.69526)
 shape = SubResource("RectangleShape2D_mok4h")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1965977838]
 script = ExtResource("11_qoh2p")
 
 [node name="Inventory" parent="CanvasLayer" unique_id=1822570111 instance=ExtResource("12_gs42a")]
-offset_left = 1.0
-offset_right = 118.0
-offset_bottom = 89.0
+offset_right = 0.0
+offset_bottom = 0.0
+metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

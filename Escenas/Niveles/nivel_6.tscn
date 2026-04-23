@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwnw50k01x4dc" path="res://Sprites/Tiles/Dungeon_WallsAndFloors.png" id="1_tf56i"]
 [ext_resource type="Texture2D" uid="uid://ckypw1n0amhkx" path="res://Sprites/Tiles/DungeonDecorations.png" id="2_dt7qm"]
+[ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="3_dt7qm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8bau3"]
 texture = ExtResource("1_tf56i")
@@ -559,3 +560,7 @@ tile_set = SubResource("TileSet_mclvq")
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=919653980]
 position = Vector2(94, -57)
 zoom = Vector2(0.18, 0.18)
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("3_dt7qm")]
+position = Vector2(-516, -597)
+scale = Vector2(5.2780113, 4.394898)

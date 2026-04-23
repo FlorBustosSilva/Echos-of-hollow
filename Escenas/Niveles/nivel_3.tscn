@@ -1,8 +1,10 @@
 [gd_scene format=4 uid="uid://clkawnhrglq0o"]
 
 [ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="1_khcbf"]
+[ext_resource type="Script" uid="uid://b8hoxwei08ase" path="res://Scripts/nivel_3.gd" id="1_tj5dq"]
 [ext_resource type="Texture2D" uid="uid://cddtssoqurxp0" path="res://Sprites/Tiles/DECORACIONES EXTRAS.png" id="2_khcbf"]
 [ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="3_sy8m8"]
+[ext_resource type="Script" uid="uid://bv8mv2idt86yy" path="res://Scripts/Door_2.gd" id="4_yw1ao"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yw1ao"]
 texture = ExtResource("1_khcbf")
@@ -19824,7 +19826,11 @@ texture = ExtResource("2_khcbf")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_tj5dq")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tj5dq"]
+size = Vector2(81, 108)
+
 [node name="Nivel3" type="Node2D" unique_id=1394007741]
+script = ExtResource("1_tj5dq")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=65281782]
 
@@ -19859,3 +19865,12 @@ zoom = Vector2(0.27, 0.27)
 
 [node name="Player" parent="." unique_id=1606107905 instance=ExtResource("3_sy8m8")]
 position = Vector2(-899.99994, -214.99998)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=327949173]
+script = ExtResource("4_yw1ao")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=772149074]
+position = Vector2(821, -136)
+shape = SubResource("RectangleShape2D_tj5dq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

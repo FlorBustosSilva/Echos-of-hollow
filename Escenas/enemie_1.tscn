@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://blhirnqhjhal5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wmds4"]
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1498447348]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=931345107]
+sprite_frames = SubResource("SpriteFrames_wmds4")

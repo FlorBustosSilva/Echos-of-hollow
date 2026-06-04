@@ -1,8 +1,11 @@
 [gd_scene format=4 uid="uid://cdcoe3h074gvh"]
 
+[ext_resource type="Script" uid="uid://cilhcarmoya1i" path="res://Scripts/nivel_4.gd" id="1_da5xb"]
 [ext_resource type="Texture2D" uid="uid://du7so2sxar3b1" path="res://Sprites/Tiles/tileset_sf.png" id="1_f32mv"]
 [ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="2_gdly5"]
 [ext_resource type="Texture2D" uid="uid://cddtssoqurxp0" path="res://Sprites/Tiles/DECORACIONES EXTRAS.png" id="3_cix83"]
+[ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="4_cix83"]
+[ext_resource type="Script" uid="uid://ck37n65ov5iry" path="res://Scripts/Door_3.gd" id="5_da5xb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_da5xb"]
 texture = ExtResource("1_f32mv")
@@ -9550,7 +9553,11 @@ texture = ExtResource("3_cix83")
 [sub_resource type="TileSet" id="TileSet_0euti"]
 sources/0 = SubResource("TileSetAtlasSource_cq4a3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyj0h"]
+size = Vector2(40, 38)
+
 [node name="Nivel4" type="Node2D" unique_id=616699842]
+script = ExtResource("1_da5xb")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=231311614]
 
@@ -9574,3 +9581,16 @@ tile_set = SubResource("TileSet_0euti")
 [node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=126630410]
 position = Vector2(45, 114)
 zoom = Vector2(0.28, 0.28)
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("4_cix83")]
+position = Vector2(-252.99998, 360.99997)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1865988912]
+script = ExtResource("5_da5xb")
+next_scene_path = "var scene = load(\"res://Escenas/Niveles/nivel_6.tscn\")"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1053155047]
+position = Vector2(1, -297)
+shape = SubResource("RectangleShape2D_cyj0h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

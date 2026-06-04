@@ -24,4 +24,4 @@ func _physics_process(delta: float) -> void:
 		if direction.x != 0:
 			anim_player.flip_h = direction.x < 0
 	else:
-		anim_player.play("IDLE")
+		anim_player.play("idle")

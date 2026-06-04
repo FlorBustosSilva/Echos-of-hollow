@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://dum5f3cm7pe7m"]
+
+[ext_resource type="Script" uid="uid://ruolkdx4vljs" path="res://Scripts/Inventary_Item.gd" id="1_aw7dd"]
+[ext_resource type="Texture2D" uid="uid://clhotp7qvua1i" path="res://Ninja Adventure - Asset Pack/Items/Potion/Heart.png" id="2_qi2fb"]
+
+[resource]
+script = ExtResource("1_aw7dd")
+name = "Vida"
+texture = ExtResource("2_qi2fb")
+metadata/_custom_type_script = "uid://ruolkdx4vljs"

@@ -1,11 +1,28 @@
 [gd_scene format=3 uid="uid://dvsreoo1w76y8"]
 
+[ext_resource type="Texture2D" uid="uid://de2vmm05yhvg7" path="res://Enemies/Zombie_Small/Zombie_Small_Up_First-Attack-Sheet4.png" id="1_1re8n"]
 [ext_resource type="Texture2D" uid="uid://073q5m8dup3x" path="res://Enemies/Zombie_Small/Zombie_Small_Down_Idle-Sheet6.png" id="1_uxd58"]
 [ext_resource type="Texture2D" uid="uid://bq68wdr0mghru" path="res://Enemies/Zombie_Small/Zombie_Small_Side-left_Idle-Sheet6.png" id="2_1re8n"]
 [ext_resource type="Texture2D" uid="uid://b4y6yu7mw1q3w" path="res://Enemies/Zombie_Small/Zombie_Small_Side_Walk-Sheet6.png" id="3_u61w7"]
 [ext_resource type="Texture2D" uid="uid://cviy6j7osg7no" path="res://Enemies/Zombie_Small/Zombie_Small_Up_Walk-Sheet6.png" id="4_86dic"]
 [ext_resource type="Texture2D" uid="uid://bsbfgwpawp44b" path="res://Enemies/Zombie_Small/Zombie_Small_Down_walk-Sheet6.png" id="5_eg4nu"]
 [ext_resource type="Texture2D" uid="uid://do70ty12igphm" path="res://Enemies/Zombie_Small/Zombie_Small_Side-left_Walk-Sheet6.png" id="6_4dqsl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u61w7"]
+atlas = ExtResource("1_1re8n")
+region = Rect2(0, 0, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86dic"]
+atlas = ExtResource("1_1re8n")
+region = Rect2(14, 0, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eg4nu"]
+atlas = ExtResource("1_1re8n")
+region = Rect2(28, 0, 14, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dqsl"]
+atlas = ExtResource("1_1re8n")
+region = Rect2(42, 0, 14, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wbipw"]
 atlas = ExtResource("1_uxd58")
@@ -201,6 +218,38 @@ region = Rect2(65, 0, 13, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ynow6"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"Attack_Down",
+"speed": 8.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Attack_Left",
+"speed": 8.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Attack_Right",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u61w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86dic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eg4nu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dqsl")
+}],
+"loop": true,
+"name": &"Attack_Up",
+"speed": 8.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wbipw")
@@ -386,10 +435,10 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=271757553]
+[node name="CharacterBody2D2" type="CharacterBody2D" unique_id=271757553]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1896189639]
 position = Vector2(217, 155)
 sprite_frames = SubResource("SpriteFrames_ynow6")
-animation = &"Walk__Up"
+animation = &"Attack_Up"
 autoplay = "Idle_Down"

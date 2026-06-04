@@ -1,12 +1,63 @@
 [gd_scene format=3 uid="uid://dvsreoo1w76y8"]
 
 [ext_resource type="Texture2D" uid="uid://de2vmm05yhvg7" path="res://Enemies/Zombie_Small/Zombie_Small_Up_First-Attack-Sheet4.png" id="1_1re8n"]
+[ext_resource type="Texture2D" uid="uid://f647bosb3ems" path="res://Enemies/Zombie_Small/Zombie_Small_Down_First-Attack-Sheet4.png" id="1_eg4nu"]
 [ext_resource type="Texture2D" uid="uid://073q5m8dup3x" path="res://Enemies/Zombie_Small/Zombie_Small_Down_Idle-Sheet6.png" id="1_uxd58"]
 [ext_resource type="Texture2D" uid="uid://bq68wdr0mghru" path="res://Enemies/Zombie_Small/Zombie_Small_Side-left_Idle-Sheet6.png" id="2_1re8n"]
+[ext_resource type="Texture2D" uid="uid://cxtvyvksr6koa" path="res://Enemies/Zombie_Small/Zombie_Small_Side-left_First-Attack-Sheet4.png" id="2_4dqsl"]
 [ext_resource type="Texture2D" uid="uid://b4y6yu7mw1q3w" path="res://Enemies/Zombie_Small/Zombie_Small_Side_Walk-Sheet6.png" id="3_u61w7"]
+[ext_resource type="Texture2D" uid="uid://c5ew8gdxy6cup" path="res://Enemies/Zombie_Small/Zombie_Small_Side_First-Attack-Sheet4.png" id="3_wbipw"]
 [ext_resource type="Texture2D" uid="uid://cviy6j7osg7no" path="res://Enemies/Zombie_Small/Zombie_Small_Up_Walk-Sheet6.png" id="4_86dic"]
 [ext_resource type="Texture2D" uid="uid://bsbfgwpawp44b" path="res://Enemies/Zombie_Small/Zombie_Small_Down_walk-Sheet6.png" id="5_eg4nu"]
 [ext_resource type="Texture2D" uid="uid://do70ty12igphm" path="res://Enemies/Zombie_Small/Zombie_Small_Side-left_Walk-Sheet6.png" id="6_4dqsl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynow6"]
+atlas = ExtResource("1_eg4nu")
+region = Rect2(0, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdbxt"]
+atlas = ExtResource("1_eg4nu")
+region = Rect2(13, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mtek"]
+atlas = ExtResource("1_eg4nu")
+region = Rect2(26, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0r8ag"]
+atlas = ExtResource("1_eg4nu")
+region = Rect2(39, 0, 13, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frpyh"]
+atlas = ExtResource("2_4dqsl")
+region = Rect2(0, 0, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woq22"]
+atlas = ExtResource("2_4dqsl")
+region = Rect2(11, 0, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hu3af"]
+atlas = ExtResource("2_4dqsl")
+region = Rect2(22, 0, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxdeq"]
+atlas = ExtResource("2_4dqsl")
+region = Rect2(33, 0, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_foba4"]
+atlas = ExtResource("3_wbipw")
+region = Rect2(0, 0, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p013p"]
+atlas = ExtResource("3_wbipw")
+region = Rect2(11, 0, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nj03"]
+atlas = ExtResource("3_wbipw")
+region = Rect2(22, 0, 11, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1fgd"]
+atlas = ExtResource("3_wbipw")
+region = Rect2(33, 0, 11, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u61w7"]
 atlas = ExtResource("1_1re8n")
@@ -218,17 +269,53 @@ region = Rect2(65, 0, 13, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ynow6"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynow6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdbxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mtek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0r8ag")
+}],
 "loop": true,
 "name": &"Attack_Down",
 "speed": 8.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frpyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woq22")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hu3af")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxdeq")
+}],
 "loop": true,
 "name": &"Attack_Left",
 "speed": 8.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_foba4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p013p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2nj03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1fgd")
+}],
 "loop": true,
 "name": &"Attack_Right",
 "speed": 8.0
@@ -438,7 +525,8 @@ animations = [{
 [node name="CharacterBody2D2" type="CharacterBody2D" unique_id=271757553]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1896189639]
-position = Vector2(217, 155)
+position = Vector2(217, 154)
 sprite_frames = SubResource("SpriteFrames_ynow6")
-animation = &"Attack_Up"
+animation = &"Attack_Left"
 autoplay = "Idle_Down"
+frame_progress = 0.86768854

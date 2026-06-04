@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://vcokjax4ooij" path="res://Scripts/nivel_1.gd" id="1_fnq5f"]
 [ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="1_xdrds"]
 [ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="2_nixvi"]
-[ext_resource type="Script" uid="uid://bj38cd0axhcmk" path="res://Scripts/canvas_layer.gd" id="6_pcat3"]
-[ext_resource type="PackedScene" uid="uid://b8d1pofpovo8k" path="res://Escenas/Inventory_Gui.tscn" id="7_d5fjb"]
 [ext_resource type="PackedScene" uid="uid://cg57rqkq0w4j5" path="res://Escenas/collectable.tscn" id="8_d5fjb"]
 [ext_resource type="Script" uid="uid://cmcqdtqq1x36j" path="res://Scripts/Next_Room.gd" id="9_fxlbi"]
 
@@ -13966,12 +13964,6 @@ zoom = Vector2(0.3, 0.3)
 
 [node name="Player" parent="." unique_id=1606107905 instance=ExtResource("2_nixvi")]
 position = Vector2(-717.99994, 463.99997)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888045552]
-visible = false
-script = ExtResource("6_pcat3")
-
-[node name="Inventory" parent="CanvasLayer" unique_id=1822570111 instance=ExtResource("7_d5fjb")]
 
 [node name="Collectable" parent="." unique_id=1500348102 instance=ExtResource("8_d5fjb")]
 position = Vector2(-335, 135)

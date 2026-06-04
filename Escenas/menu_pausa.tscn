@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://1x3dnav6wxiy"]
+
+[ext_resource type="Script" uid="uid://hjksv8cwk5ld" path="res://Scripts/menu_pausa.gd" id="1_vhfbk"]
+
+[node name="MenuPausa" type="CanvasLayer" unique_id=416217826]
+process_mode = 3
+layer = 100
+script = ExtResource("1_vhfbk")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2097436564]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1190928444]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.0
+offset_top = -33.0
+offset_right = 43.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer" unique_id=1793924548]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "PAUSE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continuar" type="Button" parent="ColorRect/VBoxContainer" unique_id=370661121]
+process_mode = 3
+layout_mode = 2
+text = "Continuar"
+
+[node name="Salir" type="Button" parent="ColorRect/VBoxContainer" unique_id=1807070564]
+layout_mode = 2
+text = "SALIR"
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Salir" to="." method="_on_salir_pressed"]

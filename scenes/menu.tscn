@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ff5ep8v6vc7g"]
 
-[ext_resource type="Script" uid="uid://b0jj3gk88yx8q" path="res://scripts/menu.gd" id="1_vjb58"]
+[ext_resource type="Script" uid="uid://b0jj3gk88yx8q" path="res://Scripts/menu.gd" id="1_vjb58"]
 [ext_resource type="VideoStream" uid="uid://bn3lp8t62wm8r" path="res://videos/menu.ogv" id="2_video"]
 
 [node name="menu" type="Control" unique_id=1200993544]

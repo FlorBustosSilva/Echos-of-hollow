@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bj38cd0axhcmk" path="res://Scripts/canvas_layer.gd" id="6_pcat3"]
 [ext_resource type="PackedScene" uid="uid://b8d1pofpovo8k" path="res://Escenas/Inventory_Gui.tscn" id="7_d5fjb"]
 [ext_resource type="PackedScene" uid="uid://cg57rqkq0w4j5" path="res://Escenas/collectable.tscn" id="8_d5fjb"]
+[ext_resource type="PackedScene" uid="uid://blhirnqhjhal5" path="res://Escenas/enemie_1.tscn" id="8_fxlbi"]
 [ext_resource type="Script" uid="uid://cmcqdtqq1x36j" path="res://Scripts/Next_Room.gd" id="9_fxlbi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_srp00"]
@@ -13965,7 +13966,7 @@ position = Vector2(25, 191)
 zoom = Vector2(0.3, 0.3)
 
 [node name="Player" parent="." unique_id=1606107905 instance=ExtResource("2_nixvi")]
-position = Vector2(-717.99994, 463.99997)
+position = Vector2(-669.00006, 443)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1888045552]
 visible = false
@@ -13974,7 +13975,8 @@ script = ExtResource("6_pcat3")
 [node name="Inventory" parent="CanvasLayer" unique_id=1822570111 instance=ExtResource("7_d5fjb")]
 
 [node name="Collectable" parent="." unique_id=1500348102 instance=ExtResource("8_d5fjb")]
-position = Vector2(-335, 135)
+position = Vector2(-629, -47)
+scale = Vector2(2.675, 3.612)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=527865497]
 script = ExtResource("9_fxlbi")
@@ -13983,6 +13985,24 @@ next_scene_path = "res://Escenas/Niveles/nivel_2.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1813794458]
 position = Vector2(-2, -177)
 shape = SubResource("RectangleShape2D_fnq5f")
+
+[node name="Skellet3" parent="." unique_id=1498447348 instance=ExtResource("8_fxlbi")]
+position = Vector2(-282.83902, -66.36423)
+scale = Vector2(1.985, 1.985)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Skellet2" parent="." unique_id=472546536 instance=ExtResource("8_fxlbi")]
+position = Vector2(-191.174, 156.34308)
+scale = Vector2(1.985, 1.985)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Skellet" parent="." unique_id=122059762 instance=ExtResource("8_fxlbi")]
+position = Vector2(58, 177)
+scale = Vector2(1.985, 1.985)
+collision_layer = 2
+collision_mask = 0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

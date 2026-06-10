@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bj38cd0axhcmk" path="res://Scripts/canvas_layer.gd" id="4_jj245"]
 [ext_resource type="PackedScene" uid="uid://b8d1pofpovo8k" path="res://Escenas/Inventory_Gui.tscn" id="5_yy4ar"]
 [ext_resource type="Script" uid="uid://cmmmtuoic8k5j" path="res://Scripts/Door.gd" id="7_kr2x0"]
+[ext_resource type="PackedScene" uid="uid://uiv0p8gmtpvh" path="res://Escenas/Enemie.tscn" id="8_je33i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_koeil"]
 texture = ExtResource("1_p7m46")
@@ -22788,7 +22789,7 @@ position = Vector2(32, -91)
 zoom = Vector2(0.3, 0.3)
 
 [node name="Player" parent="." unique_id=1606107905 instance=ExtResource("3_qi5oq")]
-position = Vector2(-123.99999, -469.99997)
+position = Vector2(-232, -480.99997)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1591337550]
 visible = false
@@ -22810,5 +22811,17 @@ next_scene_path = "res://Escenas/Niveles/nivel_3.tscn"
 position = Vector2(309.15555, 160.68587)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_jj245")
+
+[node name="Batt" parent="." unique_id=161162511 instance=ExtResource("8_je33i")]
+position = Vector2(382, -360)
+scale = Vector2(1.64, 1.64)
+
+[node name="Batt2" parent="." unique_id=1215023796 instance=ExtResource("8_je33i")]
+position = Vector2(-476, 67)
+scale = Vector2(1.64, 1.64)
+
+[node name="Batt3" parent="." unique_id=2047059702 instance=ExtResource("8_je33i")]
+position = Vector2(79, 81)
+scale = Vector2(1.64, 1.64)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

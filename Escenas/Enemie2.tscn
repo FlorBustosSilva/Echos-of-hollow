@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dvsreoo1w76y8"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://5hbfa4jgxpiw" path="res://Scripts/Skellet.gd" id="1_82md4"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Attack.png" id="2_gbn52"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Idle.png" id="3_uxd58"]
@@ -163,3 +164,104 @@ shape = SubResource("RectangleShape2D_dr170")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="signal" unique_id=1213795902]
 position = Vector2(-5, 1)
 shape = SubResource("CircleShape2D_d5fjb")
+=======
+[ext_resource type="Script" uid="uid://dixxlh1u68d4q" path="res://Scripts/Batt.gd" id="1_eymmm"]
+[ext_resource type="Texture2D" uid="uid://dgiclqmkrb4uu" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Enemy_Batt/Flight.png" id="1_udqdk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eymmm"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kefof"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82md4"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbn52"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxd58"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1re8n"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u61w7"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(900, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86dic"]
+atlas = ExtResource("1_udqdk")
+region = Rect2(1050, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eg4nu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eymmm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kefof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82md4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbn52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxd58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1re8n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u61w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86dic")
+}],
+"loop": true,
+"name": &"Flight",
+"speed": 9.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dqsl"]
+size = Vector2(15, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wbipw"]
+radius = 77.0
+
+[node name="Batt" type="CharacterBody2D" unique_id=271757553]
+texture_filter = 1
+position = Vector2(93, 74)
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_eymmm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=474200533]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_eg4nu")
+animation = &"Flight"
+autoplay = "Flight"
+frame_progress = 0.081973314
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=158179731]
+texture_filter = 1
+position = Vector2(5.5, 2)
+shape = SubResource("RectangleShape2D_4dqsl")
+
+[node name="Signal" type="Area2D" parent="." unique_id=31294817]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Signal" unique_id=295464044]
+position = Vector2(5, 2)
+shape = SubResource("CircleShape2D_wbipw")
+
+[connection signal="body_entered" from="Signal" to="." method="_on_signal_body_entered"]
+>>>>>>> Stashed changes

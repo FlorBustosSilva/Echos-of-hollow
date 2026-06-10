@@ -154,9 +154,15 @@ animation = &"Idle"
 autoplay = "Idle"
 flip_h = true
 
+<<<<<<< Updated upstream
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483300410]
 position = Vector2(-4, 2)
 shape = SubResource("RectangleShape2D_dr170")
+=======
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1149891716]
+position = Vector2(71, -60)
+zoom = Vector2(0.715, 0.685)
+>>>>>>> Stashed changes
 
 [node name="signal" type="Area2D" parent="." unique_id=1174631287]
 

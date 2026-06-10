@@ -1,9 +1,15 @@
 [gd_scene format=3 uid="uid://uiv0p8gmtpvh"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Idle.png" id="1_34fpw"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Attack.png" id="1_kb4oi"]
 [ext_resource type="Script" uid="uid://5hbfa4jgxpiw" path="res://Scripts/Skellet.gd" id="1_qytyy"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Walk.png" id="2_8fjls"]
+=======
+[ext_resource type="Texture2D" uid="uid://o00str8vu4y0" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Idle.png" id="1_34fpw"]
+[ext_resource type="Texture2D" uid="uid://cr6mrcefp2bjp" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Attack.png" id="1_kb4oi"]
+[ext_resource type="Texture2D" uid="uid://2i7dgh27xvgt" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Walk.png" id="2_8fjls"]
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ruikw"]
 atlas = ExtResource("1_kb4oi")
@@ -138,12 +144,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr170"]
 size = Vector2(12, 29)
 
+<<<<<<< Updated upstream
 [sub_resource type="CircleShape2D" id="CircleShape2D_d5fjb"]
 radius = 39.115215
 
 [node name="Enemie" type="CharacterBody2D" unique_id=161162511]
 position = Vector2(216, 134)
 script = ExtResource("1_qytyy")
+=======
+[node name="Enemie" type="CharacterBody2D" unique_id=161162511]
+position = Vector2(216, 134)
+>>>>>>> Stashed changes
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=316265323]
 texture_filter = 1
@@ -157,9 +168,12 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=483300410]
 position = Vector2(-4, 2)
 shape = SubResource("RectangleShape2D_dr170")
+<<<<<<< Updated upstream
 
 [node name="signal" type="Area2D" parent="." unique_id=1174631287]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="signal" unique_id=1213795902]
 position = Vector2(-5, 1)
 shape = SubResource("CircleShape2D_d5fjb")
+=======
+>>>>>>> Stashed changes

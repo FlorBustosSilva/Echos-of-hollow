@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://gsx638q1bagt"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://5hbfa4jgxpiw" path="res://Scripts/Skellet.gd" id="1_koeil"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Attack.png" id="2_jj245"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Idle.png" id="3_yy4ar"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Walk.png" id="4_kr2x0"]
+=======
+[ext_resource type="Script" uid="uid://c37pp18k13ky1" path="res://Scripts/nivel_2.gd" id="1_kr2x0"]
+[ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="1_p7m46"]
+[ext_resource type="Texture2D" uid="uid://bf27i7m73ikc3" path="res://Sprites/Tiles/Decoraciones laboratorio.png" id="2_t40pw"]
+[ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="3_qi5oq"]
+[ext_resource type="PackedScene" uid="uid://dvsreoo1w76y8" path="res://Escenas/Enemie2.tscn" id="6_yy4ar"]
+[ext_resource type="Script" uid="uid://cmmmtuoic8k5j" path="res://Scripts/Door.gd" id="7_kr2x0"]
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ruikw"]
 atlas = ExtResource("2_jj245")
@@ -49,9 +58,15 @@ region = Rect2(150, 0, 150, 150)
 atlas = ExtResource("3_yy4ar")
 region = Rect2(300, 0, 150, 150)
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_f36uq"]
 atlas = ExtResource("3_yy4ar")
 region = Rect2(450, 0, 150, 150)
+=======
+[node name="Nivel2" type="Node2D" unique_id=44812362]
+position = Vector2(642, 532)
+script = ExtResource("1_kr2x0")
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_joboi"]
 atlas = ExtResource("4_kr2x0")
@@ -138,12 +153,25 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr170"]
 size = Vector2(12, 29)
 
+<<<<<<< Updated upstream
 [sub_resource type="CircleShape2D" id="CircleShape2D_d5fjb"]
 radius = 39.115215
 
 [node name="Enemie" type="CharacterBody2D" unique_id=161162511]
 position = Vector2(216, 134)
 script = ExtResource("1_koeil")
+=======
+[node name="Camera2D" type="Camera2D" parent="TimemapLayer" unique_id=1001857394]
+scale = Vector2(-5.41, -5.41)
+zoom = Vector2(0.83, 0.705)
+limit_left = 0
+limit_top = 0
+limit_right = 1350
+limit_bottom = 893
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("3_qi5oq")]
+position = Vector2(-245, -478)
+>>>>>>> Stashed changes
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=316265323]
 texture_filter = 1
@@ -158,8 +186,16 @@ flip_h = true
 position = Vector2(-4, 2)
 shape = SubResource("RectangleShape2D_dr170")
 
+<<<<<<< Updated upstream
 [node name="signal" type="Area2D" parent="." unique_id=1174631287]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="signal" unique_id=1213795902]
 position = Vector2(-5, 1)
 shape = SubResource("CircleShape2D_d5fjb")
+=======
+[node name="Batt" parent="." unique_id=271757553 instance=ExtResource("6_yy4ar")]
+position = Vector2(-49, 124)
+scale = Vector2(1.815, 1.815)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+>>>>>>> Stashed changes

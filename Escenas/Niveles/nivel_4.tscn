@@ -65,6 +65,7 @@ region = Rect2(150, 0, 150, 150)
 atlas = ExtResource("4_cyj0h")
 region = Rect2(300, 0, 150, 150)
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_450eb"]
 atlas = ExtResource("4_cyj0h")
 region = Rect2(450, 0, 150, 150)
@@ -134,6 +135,14 @@ animations = [{
 "name": &"Walk__Right",
 "speed": 6.0
 }]
+=======
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=126630410]
+position = Vector2(45, 114)
+zoom = Vector2(0.71, 0.685)
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("4_cix83")]
+position = Vector2(-246, 361)
+>>>>>>> Stashed changes
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr170"]
 size = Vector2(12, 29)

@@ -1,9 +1,18 @@
 [gd_scene format=3 uid="uid://b1cxfl678f81w"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://5hbfa4jgxpiw" path="res://Scripts/Skellet.gd" id="1_tk2b2"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Attack.png" id="2_nixvi"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Idle.png" id="3_7eufa"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Walk.png" id="4_pcat3"]
+=======
+[ext_resource type="Script" uid="uid://vcokjax4ooij" path="res://Scripts/nivel_1.gd" id="1_fnq5f"]
+[ext_resource type="Texture2D" uid="uid://d384s66t8mhgf" path="res://Sprites/Tiles/Tileset laboratorio .png" id="1_xdrds"]
+[ext_resource type="PackedScene" uid="uid://dh6oj8trucapk" path="res://Escenas/Player.tscn" id="2_nixvi"]
+[ext_resource type="PackedScene" uid="uid://uiv0p8gmtpvh" path="res://Escenas/Enemie.tscn" id="6_7eufa"]
+[ext_resource type="PackedScene" uid="uid://cg57rqkq0w4j5" path="res://Escenas/collectable.tscn" id="8_d5fjb"]
+[ext_resource type="Script" uid="uid://cmcqdtqq1x36j" path="res://Scripts/Next_Room.gd" id="9_fxlbi"]
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ruikw"]
 atlas = ExtResource("2_nixvi")
@@ -53,6 +62,7 @@ region = Rect2(300, 0, 150, 150)
 atlas = ExtResource("3_7eufa")
 region = Rect2(450, 0, 150, 150)
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_joboi"]
 atlas = ExtResource("4_pcat3")
 region = Rect2(0, 0, 150, 150)
@@ -60,6 +70,15 @@ region = Rect2(0, 0, 150, 150)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ec2y2"]
 atlas = ExtResource("4_pcat3")
 region = Rect2(150, 0, 150, 150)
+=======
+[node name="Camera2D" type="Camera2D" parent="TilemapLayer" unique_id=298833439]
+position = Vector2(15.905, 190.935)
+scale = Vector2(1.54, 1.54)
+zoom = Vector2(0.745, 0.68)
+
+[node name="Player" parent="." unique_id=1606107905 instance=ExtResource("2_nixvi")]
+position = Vector2(-672, 465)
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u5tdb"]
 atlas = ExtResource("4_pcat3")
@@ -69,6 +88,7 @@ region = Rect2(300, 0, 150, 150)
 atlas = ExtResource("4_pcat3")
 region = Rect2(450, 0, 150, 150)
 
+<<<<<<< Updated upstream
 [sub_resource type="SpriteFrames" id="SpriteFrames_gnup4"]
 animations = [{
 "frames": [{
@@ -163,3 +183,24 @@ shape = SubResource("RectangleShape2D_dr170")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="signal" unique_id=1213795902]
 position = Vector2(-5, 1)
 shape = SubResource("CircleShape2D_d5fjb")
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1813794458]
+texture_filter = 1
+position = Vector2(-3, -186)
+shape = SubResource("RectangleShape2D_fnq5f")
+
+[node name="Enemie2" parent="." unique_id=161162511 instance=ExtResource("6_7eufa")]
+position = Vector2(190.00002, 232)
+scale = Vector2(3.64, 3.64)
+
+[node name="Enemie" parent="." unique_id=14818281 instance=ExtResource("6_7eufa")]
+position = Vector2(147, 508)
+scale = Vector2(3.64, 3.64)
+
+[node name="Enemie3" parent="." unique_id=723906972 instance=ExtResource("6_7eufa")]
+position = Vector2(-171.99997, 68.00003)
+scale = Vector2(3.64, 3.64)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+>>>>>>> Stashed changes

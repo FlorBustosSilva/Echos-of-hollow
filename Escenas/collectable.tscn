@@ -5,14 +5,20 @@
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Idle.png" id="3_e5w7h"]
 [ext_resource type="Texture2D" path="res://Sprites-20260610T010548Z-3-001/Sprites/Enemigos piso 1/Skeleton/Walk.png" id="4_qydbg"]
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_ruikw"]
 atlas = ExtResource("2_4eqrx")
 region = Rect2(0, 0, 150, 150)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qcnqo"]
+size = Vector2(5.653862, 4.4789114)
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1fldd"]
 atlas = ExtResource("2_4eqrx")
 region = Rect2(150, 0, 150, 150)
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_tsvyq"]
 atlas = ExtResource("2_4eqrx")
 region = Rect2(300, 0, 150, 150)
@@ -163,3 +169,15 @@ shape = SubResource("RectangleShape2D_dr170")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="signal" unique_id=1213795902]
 position = Vector2(-5, 1)
 shape = SubResource("CircleShape2D_d5fjb")
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=865177505]
+position = Vector2(2.82693, 2.2394552)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_qcnqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=561699138]
+texture_filter = 1
+scale = Vector2(0.62820685, 0.55986387)
+texture = ExtResource("1_dfqe6")
+centered = false
+>>>>>>> Stashed changes

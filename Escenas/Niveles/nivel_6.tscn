@@ -49,9 +49,15 @@ region = Rect2(150, 0, 150, 150)
 atlas = ExtResource("3_fuvjj")
 region = Rect2(300, 0, 150, 150)
 
+<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_f36uq"]
 atlas = ExtResource("3_fuvjj")
 region = Rect2(450, 0, 150, 150)
+=======
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=919653980]
+position = Vector2(94, -57)
+zoom = Vector2(-0.51, 0.45)
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_joboi"]
 atlas = ExtResource("4_mclvq")

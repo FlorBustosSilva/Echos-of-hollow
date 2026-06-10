@@ -2,6 +2,26 @@
 
 [ext_resource type="Script" uid="uid://b0jj3gk88yx8q" path="res://Scripts/menu.gd" id="1_vjb58"]
 [ext_resource type="VideoStream" uid="uid://bn3lp8t62wm8r" path="res://videos/menu.ogv" id="2_video"]
+[ext_resource type="FontFile" uid="uid://3msye0dvux7d" path="res://scenes/PressStart2P-Regular.ttf" id="3_con2f"]
+[ext_resource type="AudioStream" uid="uid://cug23i54q7eq4" path="res://Scripts/ideaClick1.mp3" id="4_mhnvy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjb58"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v86rl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ytvr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_con2f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_13sgg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6lef"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70i5f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mj5lg"]
 
 [node name="menu" type="Control" unique_id=1200993544]
 layout_mode = 3
@@ -36,38 +56,59 @@ loop = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1838132984]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -208.5
-offset_top = -80.0
-offset_right = 208.5
-offset_bottom = 80.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -229.0
+offset_top = -77.0
+grow_horizontal = 0
+grow_vertical = 0
 pivot_offset = Vector2(269, -10)
+theme_override_constants/separation = 3
 
 [node name="play" type="Button" parent="VBoxContainer" unique_id=1380620517]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.8, 1, 0.8, 1)
+theme_override_fonts/font = ExtResource("3_con2f")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vjb58")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_v86rl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4ytvr")
 text = "JUGAR"
 
 [node name="settings" type="Button" parent="VBoxContainer" unique_id=239696326]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.8, 1, 0.8, 1)
+theme_override_fonts/font = ExtResource("3_con2f")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_con2f")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_13sgg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i6lef")
 text = "AJUSTES"
 
 [node name="quit" type="Button" parent="VBoxContainer" unique_id=862365525]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.8, 1, 0.8, 1)
+theme_override_fonts/font = ExtResource("3_con2f")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mhnvy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_70i5f")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mj5lg")
 text = "SALIR"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=471529888]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="SonidoClick" type="AudioStreamPlayer" parent="." unique_id=1549540532]
+stream = ExtResource("4_mhnvy")
+volume_db = -5.0
 
 [connection signal="pressed" from="VBoxContainer/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/settings" to="." method="_on_settings_pressed"]

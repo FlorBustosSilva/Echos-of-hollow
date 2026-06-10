@@ -2,6 +2,20 @@
 
 [ext_resource type="Script" uid="uid://dhlhpsfn5idkg" path="res://Scripts/settings.gd" id="1_r6d6q"]
 [ext_resource type="VideoStream" uid="uid://bn3lp8t62wm8r" path="res://videos/menu.ogv" id="2_r6d6q"]
+[ext_resource type="FontFile" uid="uid://3msye0dvux7d" path="res://scenes/PressStart2P-Regular.ttf" id="3_6wm04"]
+[ext_resource type="AudioStream" uid="uid://cug23i54q7eq4" path="res://Scripts/ideaClick1.mp3" id="4_f4mfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f4mfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_es4n0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gis3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ppmf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhhto"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1g033"]
 
 [node name="settings" type="Control" unique_id=1200993544]
 layout_mode = 3
@@ -26,10 +40,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 578.0
-offset_top = 324.99997
-offset_right = 578.0
-offset_bottom = 325.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_r6d6q")
@@ -40,29 +50,48 @@ loop = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1838132984]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 56.0
-offset_top = -222.0
-offset_right = 473.0
-offset_bottom = -62.0
-grow_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.25
+offset_top = -28.0
+offset_right = 108.25
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset = Vector2(269, -10)
+theme_override_constants/separation = 4
+alignment = 1
 
 [node name="volume" type="Button" parent="VBoxContainer" unique_id=1380620517]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.8, 1, 0.8, 1)
+theme_override_fonts/font = ExtResource("3_6wm04")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f4mfi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_es4n0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gis3k")
 text = "VOLUMEN"
 
-[node name="resolution" type="Button" parent="VBoxContainer" unique_id=239696326]
+[node name="HSlider" type="HSlider" parent="VBoxContainer" unique_id=1550040885]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "RESOLUCION"
+max_value = 1.0
+step = 0.05
 
 [node name="back" type="Button" parent="VBoxContainer" unique_id=862365525]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.8, 1, 0.8, 1)
+theme_override_fonts/font = ExtResource("3_6wm04")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_4ppmf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_uhhto")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1g033")
 text = "ATRAS"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=471529888]
@@ -70,7 +99,10 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="SonidoClick" type="AudioStreamPlayer" parent="." unique_id=1002614180]
+stream = ExtResource("4_f4mfi")
+volume_db = -5.0
+
 [connection signal="pressed" from="VBoxContainer/volume" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/resolution" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_quit_pressed"]

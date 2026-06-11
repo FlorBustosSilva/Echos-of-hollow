@@ -811,6 +811,7 @@ script = ExtResource("1_mok4h")
 Inventory = ExtResource("2_t27sq")
 
 [node name="SpriteAnimated" type="AnimatedSprite2D" parent="." unique_id=1524211267 groups=["Player"]]
+texture_filter = 1
 position = Vector2(60.01487, 9.505361)
 sprite_frames = SubResource("SpriteFrames_a745i")
 animation = &"Idle_Down"
@@ -834,7 +835,7 @@ shape = SubResource("RectangleShape2D_t27sq")
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=60668245]
-position = Vector2(92.3913, 41.58735)
+position = Vector2(90.81197, 43.905716)
 scale = Vector2(0.9999999, 0.9999998)
 shape = SubResource("RectangleShape2D_mok4h")
 

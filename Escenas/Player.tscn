@@ -814,10 +814,10 @@ Inventory = ExtResource("2_t27sq")
 texture_filter = 1
 position = Vector2(60.01487, 9.505361)
 sprite_frames = SubResource("SpriteFrames_a745i")
-animation = &"Idle_Down"
+animation = &"Run_Right"
 autoplay = "Idle_Down"
-frame_progress = 0.94489944
 centered = false
+flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=13720004]
 visible = false
@@ -832,6 +832,7 @@ scale = Vector2(0.9999999, 0.9999994)
 shape = SubResource("RectangleShape2D_t27sq")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=1402125801]
+visible = false
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=60668245]
@@ -847,4 +848,5 @@ offset_right = 0.0
 offset_bottom = 0.0
 metadata/_edit_use_anchors_ = true
 
+[connection signal="animation_finished" from="SpriteAnimated" to="." method="_on_sprite_animated_animation_finished"]
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

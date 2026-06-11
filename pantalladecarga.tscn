@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://caicw4y56aq2f"]
+
+[ext_resource type="Script" uid="uid://buv52n0lv5q8d" path="res://pantalladecarga.gd" id="1_dola5"]
+[ext_resource type="Texture2D" uid="uid://dk5rd16bc1f6m" path="res://Sprites/iconos/Diseño sin título (4).png" id="2_qo7pj"]
+
+[node name="pantalladecarga" type="CanvasLayer" unique_id=2003245462]
+process_mode = 3
+layer = 100
+script = ExtResource("1_dola5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=313841945]
+offset_right = 478.0
+offset_bottom = 272.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1741047872]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Analizando sector...
+Cargando muestras...
+Nivel de contaminación..?"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=93671105]
+position = Vector2(440.00003, 235)
+scale = Vector2(0.07763675, 0.075622566)
+texture = ExtResource("2_qo7pj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=137704141]
+
+[node name="Timer" type="Timer" parent="." unique_id=2073965757]

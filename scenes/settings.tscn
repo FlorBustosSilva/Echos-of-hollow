@@ -1,7 +1,21 @@
 [gd_scene format=3 uid="uid://q01xoyqc1al1"]
 
-[ext_resource type="Script" uid="uid://dhlhpsfn5idkg" path="res://scripts/settings.gd" id="1_r6d6q"]
-[ext_resource type="Texture2D" uid="uid://bkmramfhkc13y" path="res://images/pixel-art-background-6yt0s1xdsvj6k7ra.jpg" id="2_6wm04"]
+[ext_resource type="Script" uid="uid://dhlhpsfn5idkg" path="res://Scripts/settings.gd" id="1_r6d6q"]
+[ext_resource type="VideoStream" uid="uid://bn3lp8t62wm8r" path="res://videos/menu.ogv" id="2_r6d6q"]
+[ext_resource type="FontFile" uid="uid://3msye0dvux7d" path="res://scenes/PressStart2P-Regular.ttf" id="3_6wm04"]
+[ext_resource type="AudioStream" uid="uid://cug23i54q7eq4" path="res://Scripts/ideaClick1.mp3" id="4_f4mfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f4mfi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_es4n0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gis3k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83j8s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjs24"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_am25x"]
 
 [node name="settings" type="Control" unique_id=1200993544]
 layout_mode = 3
@@ -21,36 +35,62 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.13077214, 0.13077214, 0.13077211, 1)
 
-[node name="PixelArtBackground6Yt0s1Xdsvj6k7Ra" type="Sprite2D" parent="." unique_id=983327670]
-position = Vector2(578, 324.99997)
-scale = Vector2(0.59895825, 0.53577363)
-texture = ExtResource("2_6wm04")
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1890402396]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_r6d6q")
+speed_scale = 0.631
+autoplay = true
+expand = true
+loop = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1838132984]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 56.0
-offset_top = -222.0
-offset_right = 473.0
-offset_bottom = -62.0
-grow_vertical = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -34.5
+offset_right = 155.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
 pivot_offset = Vector2(269, -10)
 
 [node name="volume" type="Button" parent="VBoxContainer" unique_id=1380620517]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.4509804, 1, 0.6313726, 1)
+theme_override_fonts/font = ExtResource("3_6wm04")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f4mfi")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_es4n0")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gis3k")
 text = "VOLUMEN"
 
-[node name="resolution" type="Button" parent="VBoxContainer" unique_id=239696326]
+[node name="HSlider" type="HSlider" parent="VBoxContainer" unique_id=696144233]
 layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "RESOLUCION"
+max_value = 1.0
+step = 0.05
+value = 0.5
 
 [node name="back" type="Button" parent="VBoxContainer" unique_id=862365525]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_colors/font_hover_color = Color(0.4509804, 1, 0.6313726, 1)
+theme_override_fonts/font = ExtResource("3_6wm04")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxEmpty_83j8s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gjs24")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_am25x")
 text = "ATRAS"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=471529888]
@@ -58,7 +98,9 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="SonidoClick" type="AudioStreamPlayer" parent="." unique_id=1450065166]
+stream = ExtResource("4_f4mfi")
+
 [connection signal="pressed" from="VBoxContainer/volume" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/resolution" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="VBoxContainer/back" to="." method="_on_quit_pressed"]

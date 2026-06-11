@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://724wqyoqimqy"]
+
+[node name="MenuPausa" type="Control" unique_id=1699424215]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1659159013]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1962608957]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1360698648]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "PAUSA"
+
+[node name="CONTINUAR" type="Button" parent="ColorRect" unique_id=96768613]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "CONTINUAR"
+
+[node name="MENU PRINICPAL" type="Button" parent="ColorRect" unique_id=1465225792]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 8.0
+text = "MENU PRINCIPAL"

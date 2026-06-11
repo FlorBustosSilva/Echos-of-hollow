@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://q01xoyqc1al1"]
+[gd_scene format=3 uid="uid://dxoxpa5nj2035"]
 
-[ext_resource type="Script" uid="uid://dhlhpsfn5idkg" path="res://Scripts/settings.gd" id="1_r6d6q"]
-[ext_resource type="VideoStream" uid="uid://bn3lp8t62wm8r" path="res://videos/menu.ogv" id="2_r6d6q"]
-[ext_resource type="FontFile" uid="uid://3msye0dvux7d" path="res://scenes/PressStart2P-Regular.ttf" id="3_6wm04"]
-[ext_resource type="AudioStream" uid="uid://cug23i54q7eq4" path="res://Scripts/ideaClick1.mp3" id="4_f4mfi"]
+[ext_resource type="Script" uid="uid://dhlhpsfn5idkg" path="res://Scripts/settings.gd" id="1_hllk0"]
+[ext_resource type="VideoStream" uid="uid://bn3lp8t62wm8r" path="res://videos/menu.ogv" id="2_jbntv"]
+[ext_resource type="FontFile" uid="uid://3msye0dvux7d" path="res://scenes/PressStart2P-Regular.ttf" id="3_6m7pb"]
+[ext_resource type="AudioStream" uid="uid://cug23i54q7eq4" path="res://Scripts/ideaClick1.mp3" id="4_tx650"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f4mfi"]
 
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_r6d6q")
+script = ExtResource("1_hllk0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1194573207]
 layout_mode = 1
@@ -44,7 +44,7 @@ offset_left = 1.0
 offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_r6d6q")
+stream = ExtResource("2_jbntv")
 speed_scale = 0.631
 autoplay = true
 expand = true
@@ -69,7 +69,7 @@ pivot_offset = Vector2(269, -10)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_hover_color = Color(0.4509804, 1, 0.6313726, 1)
-theme_override_fonts/font = ExtResource("3_6wm04")
+theme_override_fonts/font = ExtResource("3_6m7pb")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_f4mfi")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_es4n0")
@@ -86,7 +86,7 @@ value = 0.5
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_colors/font_hover_color = Color(0.4509804, 1, 0.6313726, 1)
-theme_override_fonts/font = ExtResource("3_6wm04")
+theme_override_fonts/font = ExtResource("3_6m7pb")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_83j8s")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_gjs24")
@@ -99,7 +99,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="SonidoClick" type="AudioStreamPlayer" parent="." unique_id=1450065166]
-stream = ExtResource("4_f4mfi")
+stream = ExtResource("4_tx650")
 volume_db = -7.913
 
 [connection signal="pressed" from="VBoxContainer/volume" to="." method="_on_play_pressed"]
